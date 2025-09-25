@@ -1,0 +1,19 @@
+{
+  "type": "project",
+  "title": "Chat-First Portfolio (RAG)",
+  "role": "Developer",
+  "dates": "2025",
+  "summary": "Interactive portfolio where a chatbot is the hero. Answers only from resume/project context via RAG; low-confidence replies hand off to direct messaging.",
+  "process": [
+    "Content modeling (bio/resume/projects)",
+    "Embeddings & cosine vector search",
+    "Grounded prompting & confidence gating",
+    "DM handoff and accessibility polish"
+  ],
+  "impact": [
+    "Recruiter-friendly answers with clear citations",
+    "Low-confidence fallback to avoid hallucinations"
+  ],
+  "tools": ["Next.js", "TypeScript", "Tailwind", "Gemini 1.5 Flash", "text-embedding-004", "Local kb.json"],
+  "topics": ["RAG", "LLM", "Portfolio UX"]
+}

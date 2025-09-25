@@ -1,0 +1,23 @@
+{
+  "type": "project",
+  "title": "AdventureWorks Sales Report",
+  "role": "Data Analyst",
+  "dates": "—",
+  "summary": "Published semantic model and report to Power BI Service; explored customer, product, and territory sales.",
+  "process": [
+    "Modeling",
+    "DAX",
+    "Publishing"
+  ],
+  "impact": [
+    "Supported business insights for stakeholders"
+  ],
+  "tools": [
+    "Power BI"
+  ],
+  "topics": [
+    "Business Analytics",
+    "BI"
+  ],
+  "links": []
+}

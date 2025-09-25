@@ -1,0 +1,22 @@
+{
+  "type": "project",
+  "title": "Lego Inventory & Parts Analysis",
+  "role": "Data Analyst",
+  "dates": "—",
+  "summary": "Modeled relational datasets to analyze set composition and part usage; dashboards for color distribution and inventory trends.",
+  "process": [
+    "Data Modeling",
+    "Visualization"
+  ],
+  "impact": [
+    "Explored relationships & composition at scale"
+  ],
+  "tools": [
+    "Power BI"
+  ],
+  "topics": [
+    "Analytics",
+    "BI"
+  ],
+  "links": []
+}

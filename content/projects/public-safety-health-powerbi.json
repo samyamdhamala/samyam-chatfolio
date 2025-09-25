@@ -1,0 +1,25 @@
+{
+  "type": "project",
+  "title": "Power BI Dashboards — Business, Healthcare & Public Safety",
+  "role": "Data Analyst",
+  "dates": "—",
+  "summary": "Dashboards on wine sales, police shootings, diabetes datasets, and venue analysis; included R visuals for correlations.",
+  "process": [
+    "Data Modeling",
+    "DAX",
+    "R Visuals"
+  ],
+  "impact": [
+    "Surfaced patterns for operational & societal insights"
+  ],
+  "tools": [
+    "Power BI",
+    "R"
+  ],
+  "topics": [
+    "Public Safety",
+    "Healthcare",
+    "Business"
+  ],
+  "links": []
+}

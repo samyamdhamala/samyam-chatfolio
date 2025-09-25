@@ -1,0 +1,30 @@
+{
+  "type": "project",
+  "title": "Airbnb Data Analysis",
+  "role": "Data Analyst",
+  "dates": "",
+  "summary": "Built Tableau dashboards to explore pricing patterns, location hotspots, and room-type distribution. Delivered interactive, filterable views so stakeholders can compare neighborhoods and listing types at a glance.",
+  "process": [
+    "Data wrangling",
+    "Exploratory analysis",
+    "Geo mapping & visuals",
+    "Interactive filters",
+    "Insight synthesis"
+  ],
+  "impact": [
+    "Supported neighborhood-level demand and revenue assessment",
+    "Improved stakeholder visibility into pricing and inventory mix"
+  ],
+  "tools": [
+    "Tableau"
+  ],
+  "topics": [
+    "Market analysis",
+    "Pricing",
+    "Geospatial",
+    "Visualization"
+  ],
+  "links": [
+    "https://public.tableau.com/shared/5PMC78JJJ?:display_count=n&:origin=viz_share_link"
+  ]
+}

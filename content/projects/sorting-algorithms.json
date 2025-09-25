@@ -1,0 +1,20 @@
+{
+  "type": "project",
+  "title": "Sorting Algorithm Analyzer",
+  "role": "Developer",
+  "dates": "",
+  "summary": "Implemented classic sorting algorithms and benchmarked them across input sizes and distributions, comparing empirical runtime with Big-O expectations.",
+  "process": [
+    "Algorithm implementation (bubble, insertion, selection, merge, quick, heap)",
+    "Instrumentation & timing",
+    "Benchmark design (varying sizes/distributions)",
+    "Result analysis & reporting"
+  ],
+  "impact": [
+    "Built intuition for real-world performance vs. theoretical complexity",
+    "Produced comparative results to guide algorithm choice by data characteristics"
+  ],
+  "tools": ["C/C++"],
+  "topics": ["Algorithms", "Complexity", "Benchmarking", "Performance"],
+  "links": ["https://github.com/samyamdhamala/sorting-algorithms"]
+}

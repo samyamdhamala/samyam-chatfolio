@@ -1,0 +1,25 @@
+{
+  "type": "faq",
+  "items": [
+    {
+      "q": "Elevator pitch",
+      "a": "I’m a Data & QA Engineer (she/her) pivoting into Data/Business Analyst roles. I combine SQL/Python analysis and dashboarding with a QA mindset to validate data, clarify requirements, and ship reliable insights."
+    },
+    {
+      "q": "Top skills",
+      "a": "SQL, Python (Pandas/NumPy), Power BI (DAX), Tableau, Excel (Power Query), Data modeling (star schema), Requirements & user stories, Acceptance criteria, Stakeholder communication, QA automation (Cypress, Postman, JMeter)."
+    },
+    {
+      "q": "What I’m looking for",
+      "a": "Data Analyst, Business Analyst, or hybrid QA/Data roles where I can turn messy data into clear recommendations, define KPIs, and improve product quality with measurable impact."
+    },
+    {
+      "q": "Pronouns",
+      "a": "she/her"
+    },
+    {
+      "q": "Interests",
+      "a": "Cooking, listening to music, watching movies, and cafe hopping."
+    }
+  ]
+}

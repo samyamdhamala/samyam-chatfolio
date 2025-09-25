@@ -1,0 +1,26 @@
+{
+  "type": "project",
+  "title": "Song Recommendation System",
+  "role": "Research/Developer",
+  "dates": "—",
+  "summary": "User‑based collaborative filtering prototype to recommend music based on listening patterns.",
+  "process": [
+    "EDA",
+    "Modeling",
+    "Evaluation"
+  ],
+  "impact": [
+    "Explored recommender techniques used by major platforms"
+  ],
+  "tools": [
+    "Python",
+    "NumPy",
+    "Pandas",
+    "SciPy"
+  ],
+  "topics": [
+    "Recommenders",
+    "ML"
+  ],
+  "links": []
+}

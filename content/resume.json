@@ -1,0 +1,119 @@
+{
+  "type": "resume",
+  "summary": "Data/QA professional (2+ yrs) skilled in Python, SQL, Power BI/Tableau, and QA automation. Combines data integrity, testing rigor, and product thinking to deliver reliable, insight‑driven experiences.",
+  "education": [
+    {
+      "degree": "MSc Information Science",
+      "school": "University of New Haven",
+      "location": "West Haven, CT",
+      "dates": "Present",
+      "gpa": "4.0"
+    },
+    {
+      "degree": "BSc (Hons) Computing (First Class Honours)",
+      "school": "London Metropolitan University (via Islington College)",
+      "location": "Kathmandu, Nepal",
+      "dates": "Graduated 2022",
+      "gpa": "4.0"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Technical Support Assistant / Intern",
+      "org": "University of New Haven",
+      "location": "West Haven, CT",
+      "dates": "Jun 2025 – Present",
+      "bullets": [
+        "Resolved 500+ support tickets; analyzed issue trends to improve response time.",
+        "Maintained and updated AI chatbot knowledge base to improve answer accuracy.",
+        "Tracked repairs, software installs, and network data to identify recurring issues."
+      ]
+    },
+    {
+      "role": "Teaching Assistant — Python Programming",
+      "org": "University of New Haven",
+      "location": "West Haven, CT",
+      "dates": "May 2025 – Present",
+      "bullets": [
+        "Facilitated labs on Python/OOP; provided debugging support and grading.",
+        "Mentored students from scripting fundamentals to problem‑solving patterns."
+      ]
+    },
+    {
+      "role": "Software QA Engineer (Contract)",
+      "org": "Cedar Gate Technologies",
+      "location": "Kathmandu, Nepal",
+      "dates": "Dec 2023 – Jan 2024",
+      "bullets": [
+        "Executed functional/regression testing for a healthcare analytics platform.",
+        "Collaborated with engineering to refine workflows and surface critical bugs."
+      ]
+    },
+    {
+      "role": "Mid‑Level QA/QC Engineer",
+      "org": "Innovate Tech",
+      "location": "Kathmandu, Nepal",
+      "dates": "Feb 2022 – Dec 2023",
+      "bullets": [
+        "Led Cypress‑based automation; increased test coverage by ~40%.",
+        "Designed 100+ reusable test cases; improved regression efficiency.",
+        "Reduced customer‑reported defects by >25% through QA process improvements.",
+        "Performed API testing (Postman) and load testing (JMeter)."
+      ]
+    },
+    {
+      "role": "QA Trainee",
+      "org": "SB Solutions",
+      "location": "Kathmandu, Nepal",
+      "dates": "Jul 2021 – Dec 2021",
+      "bullets": [
+        "Executed regression & performance tests for fintech web apps.",
+        "Contributed to early automation scripts, defect triage, and security testing."
+      ]
+    }
+  ],
+  "skills": {
+    "languages_frameworks": [
+      "Python",
+      "JavaScript",
+      "Dart",
+      "C/C++",
+      "C#",
+      "Java",
+      ".NET",
+      "Node.js"
+    ],
+    "testing_tools": [
+      "Cypress.js",
+      "Postman",
+      "Swagger",
+      "JMeter",
+      "Git",
+      "GitHub",
+      "SDLC",
+      "API Testing"
+    ],
+    "data_viz": [
+      "SQL",
+      "MySQL",
+      "Oracle",
+      "Power BI",
+      "Tableau",
+      "Excel"
+    ],
+    "process": [
+      "Agile/Scrum",
+      "Manual Testing",
+      "Automated Testing"
+    ],
+    "other": [
+      "Documentation",
+      "Cross‑functional Communication"
+    ]
+  },
+  "languages": [
+    "English",
+    "Hindi",
+    "Nepali"
+  ]
+}

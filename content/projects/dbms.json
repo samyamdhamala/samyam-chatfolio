@@ -1,0 +1,25 @@
+{
+  "type": "project",
+  "title": "Database Management System",
+  "role": "Full‑stack Developer",
+  "dates": "—",
+  "summary": "CRUD web app with structured Oracle SQL backend; input validation and integrity checks.",
+  "process": [
+    "ERD & Normalization",
+    "ASP.NET/C#",
+    "Testing/Docs"
+  ],
+  "impact": [
+    "Streamlined record management for case‑study entities"
+  ],
+  "tools": [
+    "ASP.NET",
+    "C#",
+    "Oracle SQL"
+  ],
+  "topics": [
+    "Databases",
+    "Web"
+  ],
+  "links": []
+}

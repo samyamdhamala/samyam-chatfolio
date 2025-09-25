@@ -1,0 +1,21 @@
+{
+  "type": "project",
+  "title": "Cha-Ching — Personal Expense Tracker",
+  "role": "Python Developer",
+  "dates": "",
+  "summary": "CLI budget tracker with user roles, secure credential storage, and JSON persistence. Supports expense logging, category budgets, and threshold alerts.",
+  "process": [
+    "Auth & role model",
+    "Expense logging & categories",
+    "Budget thresholds & alerts",
+    "File-based persistence",
+    "Modularization & logging"
+  ],
+  "impact": [
+    "Improved personal budgeting discipline with category-level visibility",
+    "Hardened credential handling via SHA-256 hashing"
+  ],
+  "tools": ["Python", "JSON", "Logging"],
+  "topics": ["CLI", "Budgeting", "Security", "Persistence"],
+  "links": ["https://github.com/samyamdhamala/Cha-Ching"]
+}

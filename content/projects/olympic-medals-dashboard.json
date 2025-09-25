@@ -1,0 +1,36 @@
+{
+  "type": "project",
+  "title": "Olympic Medals Dashboard",
+  "role": "Data Analyst",
+  "dates": "",
+  "summary": "Interactive Tableau suite focused on USA and global trends with gender-based analysis. Nine views cover participation, medal trends, top countries, and sport-level comparisons with filterable year/sport/country controls.",
+  "process": [
+    "Data cleaning & modeling",
+    "Visualization design",
+    "Filters & parameters",
+    "Publishing & sharing",
+    "Views included: Breaking Barriers (growth in women’s participation & medals); Closing the Gap (male vs. female trends); Icons of Success (standout women Olympians); Global Spotlight (countries leading women’s medals); USA Perspective (success by gender & sport); Top 10 Countries (medal leaders); USA Medal Trends (gold/silver/bronze over time); Participation Over the Years (male vs. female); Key Sports Driving USA Dominance (gender-based comparison)"
+  ],
+  "impact": [
+    "Enabled historical trend analysis across sports, years, and gender",
+    "Highlighted countries and sports driving growth in women’s medals",
+    "Provided quick USA-focused comparisons by sport and medal type"
+  ],
+  "tools": ["Tableau"],
+  "topics": ["Sports analytics", "Time series", "Gender equity", "USA", "Visualization"],
+  "links": [
+    "https://public.tableau.com/views/Olympics_Task1/OlympicSuccessbyGenderandSportTheUSAPerspective?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+    "https://public.tableau.com/views/OlympicWomenParticipation/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+  ],
+  "views": [
+    "Breaking Barriers: Growth in Women’s Participation & Medals",
+    "Closing the Gap: Male vs. Female Participation Over Time",
+    "Icons of Success: Standout Women Olympians",
+    "Global Spotlight: Countries Leading Women’s Medal Counts",
+    "USA Perspective: Olympic Success by Gender & Sport",
+    "Top 10 Medal-Winning Countries",
+    "USA Medal Trends Over Time (Gold, Silver, Bronze)",
+    "Participation Over the Years (Male vs. Female)",
+    "Key Sports Driving USA Dominance (Gender-Based Comparison)"
+  ]
+}
