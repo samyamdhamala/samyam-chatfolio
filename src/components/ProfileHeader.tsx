@@ -29,7 +29,7 @@ export default function ProfileHeader() {
           <a href="/Samyam_Dhamala_Resume.pdf" download className="px-3 py-2 rounded-lg bg-gray-900 text-white text-sm">
             Download PDF
           </a>
-          <a href="/Samyam_Dhamala_Resume.docx" download className="px-3 py-2 rounded-lg border text-sm">
+          <a href="/SamyamDhamalaResume.docx" download className="px-3 py-2 rounded-lg border text-sm">
             Download DOCX
           </a>
         </div>
