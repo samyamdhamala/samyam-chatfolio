@@ -1,36 +1,174 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Samyam Chat-First Portfolio (RAG)
 
-## Getting Started
+A **LinkedIn-style portfolio** where the **chatbot is the hero**.  
+Visitors interact with *Samyam* directly — asking about her **background, skills, and projects**.  
 
-First, run the development server:
+All answers are powered by **Retrieval-Augmented Generation (RAG)** over curated resume and project files.  
+If confidence is low, the bot politely says *“I’m not sure”* and offers a **direct DM handoff**.
+
+---
+
+## ✨ Features
+
+- **💬 Chat-first UX**
+  - Inline chat panel with suggested prompts
+  - Rephrase options: *Persuasive / Executive / Friendly*
+  - Related links + confidence meter
+  - Contact/DM modal for handoff
+
+- **🧠 RAG pipeline**
+  - `scripts/index.ts` → embeds content → builds `data/kb.json`
+  - `/api/answer` → retrieves Top-K chunks + generates grounded reply
+  - Low-confidence gating → DM fallback
+
+- **🎭 Role-aware tone**
+  - Tailored for *Data Analyst*, *Business Analyst*, or *QA* roles
+
+- **🖥️ Clean UI**
+  - Sections: About • About the Chatbot • Ask • Projects • Resume
+  - Project deep links (GitHub/Tableau/etc.)
+  - “Ask about this project” pre-filled prompts
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js 15](https://nextjs.org/) (App Router, TypeScript)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Google Generative AI (Gemini)](https://aistudio.google.com/)
+  - Models: `gemini-1.5-flash-001`, `gemini-1.5-flash-8b`
+  - Embeddings: `text-embedding-004`
+- Local cosine similarity search (`/lib/search.ts`)
+- [Resend](https://resend.com/) for optional email handoff
+
+---
+
+## 📂 Project Structure
+
+```
+.
+├─ public/
+│  ├─ samyam.jpg
+│  ├─ Samyam_Dhamala_Resume.pdf
+│  └─ Samyam_Dhamala_Resume.docx
+├─ content/
+│  ├─ bio.json           # optional short bio
+│  └─ projects/          # JSON per project (see schema)
+├─ data/
+│  └─ kb.json            # GENERATED via scripts/index.ts
+├─ scripts/
+│  └─ index.ts           # builds kb.json from content/*
+├─ src/
+│  ├─ app/
+│  │  ├─ api/
+│  │  │  ├─ answer/route.ts    # RAG answer endpoint
+│  │  │  ├─ reword/route.ts    # rephrase endpoint
+│  │  │  ├─ projects/route.ts  # return project JSON
+│  │  │  └─ contact/route.ts   # optional email handoff
+│  │  └─ page.tsx              # LinkedIn-style layout
+│  ├─ components/
+│  │  ├─ ProfileHeader.tsx
+│  │  ├─ ChatAbout.tsx
+│  │  ├─ ProjectsGrid.tsx / ProjectRail.tsx
+│  │  └─ AskPanel.tsx          # chat UI (self-scrolling)
+│  └─ lib/
+│     └─ search.ts             # cosine similarity / Top-K
+└─ .env.local                  # secrets (ignored by git)
+```
+
+---
+
+## 📝 Project Content Schema
+
+Each project lives in `content/projects/*.json`:
+
+```json
+{
+  "type": "project",
+  "title": "Airbnb Data Analysis",
+  "role": "Analyst/Developer",
+  "dates": "2024",
+  "summary": "Explored pricing, locations, and room distribution; built filterable views for stakeholders.",
+  "process": ["Data Wrangling", "Visualization", "Insights"],
+  "impact": ["Supported neighborhood demand & revenue assessment"],
+  "tools": ["Tableau"],
+  "topics": ["Market Analysis", "Visualization"],
+  "links": ["https://public.tableau.com/..."]
+}
+```
+
+---
+
+## 🚀 Quick Start
+
+### 1. Prereqs
+- Node.js **20+**
+- [Google AI Studio API key](https://aistudio.google.com/app/apikey)  
+- *(Optional)* [Resend API key](https://resend.com/) for email handoff
+
+---
+
+### 2. Install & Environment
+
+```bash
+npm install
+```
+
+Create `.env.local`:
+
+```ini
+# Required
+GOOGLE_API_KEY=your_google_ai_studio_key
+
+# Optional (override models if version 404s)
+GEMINI_MODEL=gemini-1.5-flash-001
+GEMINI_EMBED_MODEL=text-embedding-004
+
+# Contact (optional)
+RESEND_API_KEY=
+OWNER_EMAIL=you@domain.com
+NEXT_PUBLIC_OWNER_EMAIL=you@domain.com
+```
+
+---
+
+### 3. Add Assets & Content
+
+- `public/samyam.jpg`
+- `public/Samyam_Dhamala_Resume.pdf`
+- `public/Samyam_Dhamala_Resume.docx`
+- Add JSON files under `content/projects/`
+
+---
+
+### 4. Build Knowledge Base
+
+```bash
+npx tsx scripts/index.ts
+```
+
+---
+
+### 5. Run
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit: **http://localhost:3000**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔍 How It Works (RAG)
 
-## Learn More
+1. **Ingest** → `scripts/index.ts` reads `content/`, chunks + embeds with `text-embedding-004`, writes `data/kb.json`.
+2. **Retrieve** → `/api/answer` embeds the query, finds Top-K chunks via cosine similarity (`/lib/search.ts`), computes confidence.
+3. **Generate** → If confidence ≥ threshold → reply in first-person (*she/her*) using context.  
+   Else → reply *“I’m not sure”* → DM handoff.
+4. **UI** → Chat panel shows: grounded answer • links • confidence meter • rephrase options.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📜 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](LICENSE)
