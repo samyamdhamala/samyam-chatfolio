@@ -36,7 +36,7 @@ If confidence is low, the bot politely says *“I’m not sure”* and offers a 
 - [Next.js 15](https://nextjs.org/) (App Router, TypeScript)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Google Generative AI (Gemini)](https://aistudio.google.com/)
-  - Models: `gemini-1.5-flash-001`, `gemini-1.5-flash-8b`
+  - Models: `gemini-2.5-flash-001`, `gemini-2.5-flash-8b`
   - Embeddings: `text-embedding-004`
 - Local cosine similarity search (`/lib/search.ts`)
 - [Resend](https://resend.com/) for optional email handoff
@@ -121,7 +121,7 @@ Create `.env.local`:
 GOOGLE_API_KEY=your_google_ai_studio_key
 
 # Optional (override models if version 404s)
-GEMINI_MODEL=gemini-1.5-flash-001
+GEMINI_MODEL=gemini-2.5-flash-001
 GEMINI_EMBED_MODEL=text-embedding-004
 
 # Contact (optional)
