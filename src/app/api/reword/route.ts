@@ -18,6 +18,18 @@ const CHAT_MODEL_CANDIDATES = [
   "gemini-2.0-flash-lite-001"
 ];
 
+// Map legacy 1.5 names to current 2.x names
+const LEGACY_MAP: Record<string, string> = {
+  "gemini-1.5-flash": "gemini-2.5-flash",
+  "gemini-1.5-pro": "gemini-2.5-pro",
+  "gemini-1.5-flash-001": "gemini-2.5-flash",
+  "gemini-1.5-flash-latest": "gemini-2.5-flash",
+  "gemini-1.5-flash-8b": "gemini-2.5-flash",
+};
+
+// Accept GEMINI_MODEL or (older) GEMINI_MODE and normalize
+const RAW_ENV_MODEL = process.env.GEMINI_MODEL || process.env.GEMINI_MODE || "";
+const ENV_MODEL = RAW_ENV_MODEL ? (LEGACY_MAP[RAW_ENV_MODEL] || RAW_ENV_MODEL) : "";
 async function generateWithFallback(prompt: string) {
   const errors: string[] = [];
   for (const modelName of CHAT_MODEL_CANDIDATES) {
@@ -27,6 +39,8 @@ async function generateWithFallback(prompt: string) {
       return out.response.text();
     } catch (e: any) {
       errors.push(`${modelName}: ${e?.message || String(e)}`);
+      console.error("[REWORD MODEL ERROR]", { modelName, message: e?.message || String(e) });
+
     }
   }
   throw new Error(

@@ -7,16 +7,31 @@ export const runtime = "nodejs";
 const genAI = process.env.GOOGLE_API_KEY ? new GoogleGenerativeAI(process.env.GOOGLE_API_KEY) : null;
 
 const EMBED_MODEL = process.env.GEMINI_EMBED_MODEL || "text-embedding-004";
-// Try env model first, then fallbacks that are broadly available
+
+// Map any legacy 1.5 names to current 2.x names
+const LEGACY_MAP: Record<string, string> = {
+  "gemini-1.5-flash": "gemini-2.5-flash",
+  "gemini-1.5-pro": "gemini-2.5-pro",
+  "gemini-1.5-flash-001": "gemini-2.5-flash",
+  "gemini-1.5-flash-latest": "gemini-2.5-flash",
+  "gemini-1.5-flash-8b": "gemini-2.5-flash",
+};
+
+// Prefer GEMINI_MODEL, but also accept GEMINI_MODE (from older envs).
+const RAW_ENV_MODEL = process.env.GEMINI_MODEL || process.env.GEMINI_MODE || "";
+const ENV_MODEL = RAW_ENV_MODEL ? (LEGACY_MAP[RAW_ENV_MODEL] || RAW_ENV_MODEL) : "";
+
+/// Try (normalized) env first, then stable 2.x fallbacks
 const CHAT_MODEL_CANDIDATES = [
-  ...(process.env.GEMINI_MODEL ? [process.env.GEMINI_MODEL] : []),
- "gemini-2.5-flash",
+  ...(ENV_MODEL ? [ENV_MODEL] : []),
+  "gemini-2.5-flash",
   "gemini-2.5-pro",
+  "gemini-2.5-flash-lite",
   "gemini-2.0-flash",
   "gemini-2.0-flash-001",
   "gemini-2.0-flash-lite",
-  "gemini-2.0-flash-lite-001"
 ];
+
 
 const TOPK = 10;
 const LOW_CONF = 0.40;
@@ -30,7 +45,8 @@ async function generateWithFallback(prompt: string) {
       return { text: out.response.text(), model: modelName };
     } catch (e: any) {
       errors.push(`${modelName}: ${e?.message || e}`);
-      // try next candidate
+      console.error("[MODEL ERROR]", { modelName, message: e?.message || e });
+
     }
   }
   throw new Error(`All chat models failed.\nTried: ${CHAT_MODEL_CANDIDATES.join(", ")}\nErrors:\n${errors.join("\n")}`);
