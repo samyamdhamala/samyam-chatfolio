@@ -14,6 +14,6 @@
     "Recruiter-friendly answers with clear citations",
     "Low-confidence fallback to avoid hallucinations"
   ],
-  "tools": ["Next.js", "TypeScript", "Tailwind", "Gemini 1.5 Flash", "text-embedding-004", "Local kb.json"],
+  "tools": ["Next.js", "TypeScript", "Tailwind", "Gemini 2.5 Flash", "text-embedding-004", "Local kb.json"],
   "topics": ["RAG", "LLM", "Portfolio UX"]
 }

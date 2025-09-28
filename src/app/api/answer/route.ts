@@ -10,10 +10,12 @@ const EMBED_MODEL = process.env.GEMINI_EMBED_MODEL || "text-embedding-004";
 // Try env model first, then fallbacks that are broadly available
 const CHAT_MODEL_CANDIDATES = [
   ...(process.env.GEMINI_MODEL ? [process.env.GEMINI_MODEL] : []),
-  "gemini-1.5-flash-latest",
-  "gemini-1.5-flash-001",
-  "gemini-1.5-flash",
-  "gemini-1.5-flash-8b"
+ "gemini-2.5-flash",
+  "gemini-2.5-pro",
+  "gemini-2.0-flash",
+  "gemini-2.0-flash-001",
+  "gemini-2.0-flash-lite",
+  "gemini-2.0-flash-lite-001"
 ];
 
 const TOPK = 10;
