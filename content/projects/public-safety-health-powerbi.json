@@ -1,25 +1,23 @@
 {
   "type": "project",
-  "title": "Power BI Dashboards — Business, Healthcare & Public Safety",
+  "title": "Public Safety, Healthcare & Business Dashboards (Power BI)",
   "role": "Data Analyst",
-  "dates": "—",
-  "summary": "Dashboards on wine sales, police shootings, diabetes datasets, and venue analysis; included R visuals for correlations.",
+  "dates": "",
+  "summary": "Collection of Power BI reports analyzing police shootings, diabetes/health patterns, wine wholesaler profitability, and environmental data. Demonstrates ability to model diverse datasets.",
   "process": [
-    "Data Modeling",
-    "DAX",
-    "R Visuals"
+    "Cleaned, joined, and shaped datasets from multiple domains (public safety, health, retail)",
+    "Designed semantic models with calculated tables, relationships, and DAX measures",
+    "Added KPIs for revenue, health indicators, and demographic segmentation",
+    "Integrated R visuals to explore correlations and trends not visible in basic charts",
+    "Created drill-through and tooltip pages for detailed data exploration",
+    "Applied BI best practices in dimensional modeling, layout, and performance optimization"
   ],
   "impact": [
-    "Surfaced patterns for operational & societal insights"
+    "Uncovered actionable insights across business, healthcare, and societal datasets",
+    "Demonstrated ability to handle messy, real-world data and derive meaningful indicators",
+    "Showed strong competency in DAX, modeling, and cross-domain analytics"
   ],
-  "tools": [
-    "Power BI",
-    "R"
-  ],
-  "topics": [
-    "Public Safety",
-    "Healthcare",
-    "Business"
-  ],
+  "tools": ["Power BI", "R"],
+  "topics": ["Public Safety", "Healthcare", "Business Analytics", "DAX", "Visualization"],
   "links": ["https://github.com/samyamdhamala/PowerBI_Projects/tree/main/Police%20Shootings%20in%20the%20US", "https://github.com/samyamdhamala/PowerBI_Projects/tree/main/Profit%20Analytics%20for%20UK%20Wine%20Wholesaler", "https://github.com/samyamdhamala/PowerBI_Projects/blob/main/Utilization%20and%20CO2%20emissions/README.md"]
 }

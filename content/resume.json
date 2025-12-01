@@ -1,12 +1,12 @@
 {
   "type": "resume",
-  "summary": "Data/QA professional (2+ yrs) skilled in Python, SQL, Power BI/Tableau, and QA automation. Combines data integrity, testing rigor, and product thinking to deliver reliable, insight‑driven experiences.",
+  "summary": "Versatile Data Analyst, QA Engineer, and Software/C++ Developer with 3+ years across QA automation, BI reporting, IT support, and full-stack development. Skilled in Python, SQL, Power BI, Tableau, modern C++, and tools like Cypress, Postman, JMeter, and Git. Known for validating data, expanding test coverage, and building dashboards and tools that make technical systems easier to understand and trust.",
   "education": [
     {
-      "degree": "MSc Information Science",
+      "degree": "MSc Information Science (STEM)",
       "school": "University of New Haven",
       "location": "West Haven, CT",
-      "dates": "Present",
+      "dates": "Expected Dec 2025",
       "gpa": "4.0"
     },
     {
@@ -19,14 +19,16 @@
   ],
   "experience": [
     {
-      "role": "Technical Support Assistant / Intern",
+      "role": "Technical Support Assistant Intern",
       "org": "University of New Haven",
       "location": "West Haven, CT",
       "dates": "Jun 2025 – Present",
       "bullets": [
-        "Resolved 500+ support tickets; analyzed issue trends to improve response time.",
-        "Maintained and updated AI chatbot knowledge base to improve answer accuracy.",
-        "Tracked repairs, software installs, and network data to identify recurring issues."
+        "Resolved 550+ support tickets, diagnosing hardware, software, and account issues and reducing resolution time by ~30%.",
+        "Assisted students and staff with DUO and Microsoft Authenticator setup, PIN resets, and secure account recovery.",
+        "Installed and configured software such as Microsoft 365, SPSS, and virtual machines; performed basic hardware repairs (RAM, drives, batteries).",
+        "Updated and maintained the AI chatbot knowledge base, improving answer accuracy and reducing manual workload by ~25%.",
+        "Documented tickets, repairs, and recurring issues, and contributed to simple Excel/Power BI reports on ticket trends and resolution KPIs."
       ]
     },
     {
@@ -35,8 +37,22 @@
       "location": "West Haven, CT",
       "dates": "May 2025 – Present",
       "bullets": [
-        "Facilitated labs on Python/OOP; provided debugging support and grading.",
-        "Mentored students from scripting fundamentals to problem‑solving patterns."
+        "Guided students through Python labs on loops, functions, OOP, and problem-solving patterns; provided debugging support in real time.",
+        "Evaluated and provided feedback on 50+ assignments, emphasizing readable, maintainable code and clear logic.",
+        "Helped students connect core programming concepts to data analysis and automation use cases."
+      ]
+    },
+    {
+      "role": "Mid-Level QA/QC Engineer",
+      "org": "Innovate Tech",
+      "location": "Kathmandu, Nepal",
+      "dates": "Feb 2022 – Dec 2023",
+      "bullets": [
+        "Conducted manual and automated testing for a global EdTech platform, covering web UI, APIs, and data pipelines.",
+        "Led frontend automation using Cypress.js, expanding regression coverage by ~35% and reducing manual regression effort.",
+        "Designed SQL queries and data checks to validate reporting accuracy and cross-verify analytics data with source systems.",
+        "Managed API and performance testing with Postman, Swagger, JMeter/K6 and integrated suites into CI/CD pipelines.",
+        "Collaborated with developers and business stakeholders in Agile/JIRA workflows to triage defects, plan hotfixes, and improve user experience."
       ]
     },
     {
@@ -45,20 +61,9 @@
       "location": "Kathmandu, Nepal",
       "dates": "Dec 2023 – Jan 2024",
       "bullets": [
-        "Executed functional/regression testing for a healthcare analytics platform.",
-        "Collaborated with engineering to refine workflows and surface critical bugs."
-      ]
-    },
-    {
-      "role": "Mid‑Level QA/QC Engineer",
-      "org": "Innovate Tech",
-      "location": "Kathmandu, Nepal",
-      "dates": "Feb 2022 – Dec 2023",
-      "bullets": [
-        "Led Cypress‑based automation; increased test coverage by ~40%.",
-        "Designed 100+ reusable test cases; improved regression efficiency.",
-        "Reduced customer‑reported defects by >25% through QA process improvements.",
-        "Performed API testing (Postman) and load testing (JMeter)."
+        "Executed functional and regression testing for a healthcare analytics platform with complex workflows and data flows.",
+        "Translated requirements and user stories into detailed test cases with strong coverage of edge cases and data validation.",
+        "Partnered with engineering and product teams to refine workflows, log clear defects, and support faster resolution cycles."
       ]
     },
     {
@@ -67,48 +72,64 @@
       "location": "Kathmandu, Nepal",
       "dates": "Jul 2021 – Dec 2021",
       "bullets": [
-        "Executed regression & performance tests for fintech web apps.",
-        "Contributed to early automation scripts, defect triage, and security testing."
+        "Performed functional and regression testing for financial web applications, focusing on core transactions and security flows.",
+        "Supported early Selenium-based UI automation efforts and basic performance and hardware testing.",
+        "Learned defect lifecycle, SDLC, and documentation best practices in a structured QA environment."
       ]
     }
   ],
   "skills": {
     "languages_frameworks": [
       "Python",
+      "SQL",
       "JavaScript",
-      "Dart",
-      "C/C++",
+      "TypeScript",
+      "C++",
       "C#",
       "Java",
+      "Dart",
       ".NET",
-      "Node.js"
+      "Node.js",
+      "Flutter",
+      "Express.js",
+      "React (basic)"
     ],
     "testing_tools": [
       "Cypress.js",
       "Postman",
       "Swagger",
+      "Selenium",
       "JMeter",
+      "K6",
       "Git",
       "GitHub",
-      "SDLC",
-      "API Testing"
+      "API Testing",
+      "CI/CD Pipelines"
     ],
     "data_viz": [
-      "SQL",
-      "MySQL",
-      "Oracle",
       "Power BI",
       "Tableau",
-      "Excel"
+      "Excel",
+      "DAX",
+      "MySQL",
+      "Oracle SQL",
+      "Snowflake",
+      "Data Modeling & Star Schemas"
     ],
     "process": [
-      "Agile/Scrum",
-      "Manual Testing",
-      "Automated Testing"
+      "Agile/Scrum & Kanban",
+      "SDLC",
+      "Manual & Automated Testing",
+      "Data Quality Assurance",
+      "Requirements Gathering",
+      "Ticketing & Incident Management (JIRA)"
     ],
     "other": [
+      "IT Support & Troubleshooting",
+      "MFA Setup (DUO, Microsoft Authenticator)",
       "Documentation",
-      "Cross‑functional Communication"
+      "Cross-functional Communication",
+      "Dashboard Storytelling"
     ]
   },
   "languages": [

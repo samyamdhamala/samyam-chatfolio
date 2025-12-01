@@ -1,13 +1,14 @@
 {
   "type": "bio",
   "name": "Samyam Dhamala",
-  "headline": "Data & QA Engineer • MS Information Science (UNH) • Python · SQL · QA Automation",
-  "about": "Analytical and technically skilled professional with 2+ years across data validation, software QA, and visualization. Experienced with Python, SQL, Power BI, Tableau, and test automation tools like Cypress and Postman. Comfortable communicating insights, collaborating across Agile teams, and improving product quality and decision‑making.",
+  "headline": "Data Analyst • QA Engineer • Software/C++ Developer | MS Information Science",
+  "about": "Versatile data and software professional with 3+ years across QA automation, data analysis/BI, IT support, and full-stack development. Experienced with Python, SQL, Power BI, Tableau, modern C++, and test automation tools like Cypress, Postman, and JMeter. Currently completing an MS in Information Science and enjoy turning messy data and complex systems into reliable, human-centered experiences.",
   "interests": [
-    "Data Analysis",
-    "QA Automation",
-    "Dashboards",
-    "Python Programming"
+    "Data Analysis & BI Dashboards",
+    "QA Automation & Testing Strategy",
+    "C++ and Systems Programming",
+    "Full-Stack Development",
+    "IT Support & Troubleshooting"
   ],
-  "last_updated": "2025-09-25"
+  "last_updated": "2025-11-30"
 }

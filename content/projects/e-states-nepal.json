@@ -3,20 +3,22 @@
   "title": "E-States Nepal",
   "role": "Full-stack Developer",
   "dates": "",
-  "summary": "Real-estate listing app with authentication, listing management, and search. Backend APIs built with Express.js and MySQL; mobile client in Flutter.",
+  "summary": "Cross-platform real-estate application enabling property search, listing management, authentication, and API-driven interactions. Built with a modular backend and optimized Flutter UI.",
   "process": [
-    "Market & requirements research",
-    "Incremental prototyping",
-    "REST API design & implementation",
-    "Auth + CRUD for listings",
-    "Search & filtering",
-    "Usability testing & iteration"
+    "Designed MySQL relational schema for listings, users, images, locations, and saved properties",
+    "Developed REST APIs for CRUD listings, search filters, authentication, and session management",
+    "Built Flutter UI with responsive components, paginated lists, and state management",
+    "Integrated backend API responses with caching and data validation on client side",
+    "Conducted usability testing to refine navigation, button placement, and filter clarity",
+    "Added basic analytics events (searches, favorites) for future insights"
   ],
   "impact": [
-    "Streamlined browse/search flows for property discovery",
-    "Closed the loop between user evaluation and UX improvements"
+    "Enabled transparent property discovery without broker dependency",
+    "Demonstrated ability to design mobile interfaces and backend data flows",
+    "Improved UX with fast search, intuitive filters, and smooth navigation",
+    "Showcased strong API design, SQL modeling, and client-server integration"
   ],
   "tools": ["Flutter", "Express.js", "MySQL"],
-  "topics": ["Mobile", "Backend", "Usability", "Search"],
+  "topics": ["Mobile", "Backend", "Search", "Usability", "Full-stack"],
   "links": ["https://github.com/samyamdhamala/E-States-Nepal-Overview"]
 }

@@ -3,15 +3,19 @@
   "items": [
     {
       "q": "Elevator pitch",
-      "a": "I’m a Data & QA Engineer (she/her) pivoting into Data/Business Analyst roles. I combine SQL/Python analysis and dashboarding with a QA mindset to validate data, clarify requirements, and ship reliable insights."
-    },
-    {
-      "q": "Top skills",
-      "a": "SQL, Python (Pandas/NumPy), Power BI (DAX), Tableau, Excel (Power Query), Data modeling (star schema), Requirements & user stories, Acceptance criteria, Stakeholder communication, QA automation (Cypress, Postman, JMeter)."
+      "a": "I’m Samyam, a Data Analyst / QA Engineer / Software Developer with 3+ years across QA automation, data visualization, IT support, and full-stack work. I like combining a QA mindset (edge cases, reliability) with data skills (SQL, Python, BI dashboards) and software engineering (C++, .NET, web) to ship systems that are both accurate and usable."
     },
     {
       "q": "What I’m looking for",
-      "a": "Data Analyst, Business Analyst, or hybrid QA/Data roles where I can turn messy data into clear recommendations, define KPIs, and improve product quality with measurable impact."
+      "a": "I’m targeting Data Analyst, Business Analyst, QA Engineer, and hybrid Data/QA or Software roles where I can own pipelines, validate data and features, build dashboards and tools, and partner closely with stakeholders to turn requirements into reliable, measurable outcomes."
+    },
+    {
+      "q": "Top skills",
+      "a": "SQL (MySQL, Oracle), Python (Pandas/NumPy), Power BI, Tableau, Excel; QA automation with Cypress, Postman, Swagger, JMeter; Programming in C++, C#, JavaScript, Dart, Java, .NET, Node.js, Flutter; Data modeling, DAX, dashboard design; Agile/Scrum, JIRA, CI/CD, documentation, ticket triage, and cross-functional communication."
+    },
+    {
+      "q": "Recent experience",
+      "a": "Recently I’ve been a Technical Support Assistant and Python Teaching Assistant at the University of New Haven, where I resolve 500+ tickets, support MFA/software installs, improve an AI chatbot knowledge base, and build basic reports and dashboards. Before that I worked as a Mid-Level QA/QC Engineer and QA Trainee testing a global EdTech and fintech products with Cypress, Postman, and JMeter."
     },
     {
       "q": "Pronouns",
@@ -20,6 +24,10 @@
     {
       "q": "Interests",
       "a": "Cooking, listening to music, watching movies, and cafe hopping."
+    },
+    {
+      "q": "Work authorization & timeline",
+      "a": "I’m an international student in the U.S. completing my MS in Information Science (STEM). I’ll be eligible for 12-month post-completion OPT plus a 24-month STEM extension after graduation (expected Dec 2025), and I’m open to internships, co-ops, and full-time roles aligned with that timeline."
     }
   ]
 }

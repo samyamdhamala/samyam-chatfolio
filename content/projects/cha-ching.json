@@ -3,19 +3,22 @@
   "title": "Cha-Ching — Personal Expense Tracker",
   "role": "Python Developer",
   "dates": "",
-  "summary": "CLI budget tracker with user roles, secure credential storage, and JSON persistence. Supports expense logging, category budgets, and threshold alerts.",
+  "summary": "End-to-end CLI finance tool built with secure authentication, category-based budgeting, input validation, and persistent JSON storage. Designed to reflect real-world financial logging systems and emphasize clean software architecture, error handling, and user experience.",
   "process": [
-    "Auth & role model",
-    "Expense logging & categories",
-    "Budget thresholds & alerts",
-    "File-based persistence",
-    "Modularization & logging"
+    "Developed modular Python architecture separating auth, logging, validation, and reporting layers",
+    "Implemented SHA-256 credential hashing and secure role-based login workflow",
+    "Designed a structured JSON schema for persistent data storage and fast retrieval",
+    "Added defensive programming and error-handling to prevent malformed data and handle edge cases",
+    "Created reusable utility functions for budget alerts, category rollups, and monthly summaries",
+    "Wrote test cases for logic blocks (budget thresholds, input validation, incorrect credentials)"
   ],
   "impact": [
-    "Improved personal budgeting discipline with category-level visibility",
-    "Hardened credential handling via SHA-256 hashing"
+    "Demonstrated secure credential handling and real-world software patterns at small scale",
+    "Built a maintainable CLI tool reflecting production principles like separation of concerns",
+    "Improved personal budgeting decisions with category-level visibility and alerts",
+    "Showcased ability to implement data validation, logging, and system consistency checks"
   ],
-  "tools": ["Python", "JSON", "Logging"],
-  "topics": ["CLI", "Budgeting", "Security", "Persistence"],
+  "tools": ["Python", "JSON", "SHA-256", "Logging"],
+  "topics": ["CLI", "Budgeting", "Security", "Persistence", "Software Engineering", "Validation"],
   "links": ["https://github.com/samyamdhamala/Cha-Ching"]
 }

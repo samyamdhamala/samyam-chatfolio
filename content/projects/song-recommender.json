@@ -1,26 +1,22 @@
 {
   "type": "project",
   "title": "Song Recommendation System",
-  "role": "Research/Developer",
-  "dates": "—",
-  "summary": "User‑based collaborative filtering prototype to recommend music based on listening patterns.",
+  "role": "Research / Developer",
+  "dates": "",
+  "summary": "Python-based music recommendation prototype using collaborative filtering and similarity metrics to suggest songs based on user behavior.",
   "process": [
-    "EDA",
-    "Modeling",
-    "Evaluation"
+    "Cleaned and analyzed user–song interaction data using Pandas and NumPy",
+    "Handled sparsity using matrix techniques and normalization methods",
+    "Tested cosine similarity and Pearson correlation for user similarity scoring",
+    "Evaluated output using precision/recall and manual playlist inspection",
+    "Documented limitations and explored improvements using matrix factorization"
   ],
   "impact": [
-    "Explored recommender techniques used by major platforms"
+    "Practiced core recommender system algorithms used by major music platforms",
+    "Strengthened understanding of ML fundamentals and evaluation techniques",
+    "Showcased ability to build analytical prototypes end-to-end"
   ],
-  "tools": [
-    "Python",
-    "NumPy",
-    "Pandas",
-    "SciPy"
-  ],
-  "topics": [
-    "Recommenders",
-    "ML"
-  ],
+  "tools": ["Python", "NumPy", "Pandas", "SciPy"],
+  "topics": ["Recommenders", "ML", "Analytics", "Similarity"],
   "links": []
 }

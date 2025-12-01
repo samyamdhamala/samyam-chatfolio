@@ -1,25 +1,24 @@
 {
   "type": "project",
-  "title": "Database Management System",
-  "role": "Full‑stack Developer",
-  "dates": "—",
-  "summary": "CRUD web app with structured Oracle SQL backend; input validation and integrity checks.",
+  "title": "Database Management System (CRUD Web App)",
+  "role": "Full-stack Developer",
+  "dates": "",
+  "summary": "ASP.NET + Oracle SQL web application supporting CRUD, data validation, secure form handling, and integrity constraints. Designed to simulate enterprise record-management systems used in healthcare, finance, and operations.",
   "process": [
-    "ERD & Normalization",
-    "ASP.NET/C#",
-    "Testing/Docs"
+    "Designed a normalized relational schema with foreign keys, triggers, and constraints",
+    "Implemented robust CRUD operations with backend checks ensuring referential integrity",
+    "Built ASP.NET UI with forms, grid views, pagination, and error feedback messages",
+    "Added server-side validation to prevent SQL injection, null inputs, and invalid states",
+    "Created stored procedures for common queries and optimized repetitive operations",
+    "Tested key workflows, edge cases, and data consistency using sample datasets"
   ],
   "impact": [
-    "Streamlined record management for case‑study entities"
+    "Replaced manual record tracking with a structured, searchable digital system",
+    "Improved data accuracy by enforcing validation and database constraints",
+    "Demonstrated ability to build full-stack apps and manage end-to-end data flow",
+    "Strengthened understanding of enterprise CRUD systems like EMRs, SIS, and CRM software"
   ],
-  "tools": [
-    "ASP.NET",
-    "C#",
-    "Oracle SQL"
-  ],
-  "topics": [
-    "Databases",
-    "Web"
-  ],
+  "tools": ["ASP.NET", "C#", "Oracle SQL"],
+  "topics": ["Databases", "CRUD", "Validation", "Backend Development", "Web"],
   "links": []
 }

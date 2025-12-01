@@ -1,19 +1,24 @@
 {
   "type": "project",
   "title": "Chat-First Portfolio (RAG)",
-  "role": "Developer",
+  "role": "Full-stack Developer",
   "dates": "2025",
-  "summary": "Interactive portfolio where a chatbot is the hero. Answers only from resume/project context via RAG; low-confidence replies hand off to direct messaging.",
+  "summary": "Interactive, AI-driven portfolio using a Retrieval-Augmented Generation pipeline to deliver grounded, verifiable answers about experience, skills, and projects. Designed as a recruiter-facing tool prioritizing accuracy, clarity, and accessibility.",
   "process": [
-    "Content modeling (bio/resume/projects)",
-    "Embeddings & cosine vector search",
-    "Grounded prompting & confidence gating",
-    "DM handoff and accessibility polish"
+    "Created structured JSON-based knowledge base (bio, resume, FAQ, projects) for clean retrieval",
+    "Implemented embedding generation and cosine similarity search for local context lookup",
+    "Designed prompt templates emphasizing grounded responses, citations, and safety gating",
+    "Built fallback behaviors for low-confidence results to reduce hallucinations",
+    "Developed Next.js UI with responsive design, keyboard accessibility, and dark/light themes",
+    "Added event logging to understand common recruiter questions and improve content coverage"
   ],
   "impact": [
-    "Recruiter-friendly answers with clear citations",
-    "Low-confidence fallback to avoid hallucinations"
+    "Provided an instant, interactive way for recruiters to understand my skills without reading long pages",
+    "Reduced misinformation by restricting answers to verified resume/project data",
+    "Showcased ability to integrate LLMs, vector search, and front-end engineering into a cohesive system",
+    "Demonstrated UX thinking, accessibility design, and full-stack engineering skills in one project"
   ],
-  "tools": ["Next.js", "TypeScript", "Tailwind", "Gemini 2.5 Flash", "text-embedding-004", "Local kb.json"],
-  "topics": ["RAG", "LLM", "Portfolio UX"]
+  "tools": ["Next.js", "TypeScript", "Tailwind", "Gemini Flash", "text-embedding-004"],
+  "topics": ["RAG", "AI", "LLM", "Retrieval", "Full-stack Development", "UX"],
+  "links": []
 }

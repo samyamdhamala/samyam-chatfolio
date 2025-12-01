@@ -1,23 +1,22 @@
 {
   "type": "project",
-  "title": "AdventureWorks Sales Report",
+  "title": "AdventureWorks Sales Dashboard",
   "role": "Data Analyst",
-  "dates": "—",
-  "summary": "Published semantic model and report to Power BI Service; explored customer, product, and territory sales.",
+  "dates": "",
+  "summary": "Business intelligence report analyzing revenue, customers, and product performance across regions. Built using Power BI semantic model.",
   "process": [
-    "Modeling",
-    "DAX",
-    "Publishing"
+    "Explored model relationships between sales, geography, products, and customers",
+    "Created DAX measures for revenue, profit, YoY growth, and customer segmentation",
+    "Designed interactive visuals with drill-down paths for product and territory analysis",
+    "Built slicers to enable quick filtering by date, segment, or region",
+    "Published report and documented findings for business stakeholders"
   ],
   "impact": [
-    "Supported business insights for stakeholders"
+    "Delivered a clear view of business performance across multiple dimensions",
+    "Highlighted top-performing SKUs and underperforming territories",
+    "Showcased BI storytelling and DAX proficiency"
   ],
-  "tools": [
-    "Power BI"
-  ],
-  "topics": [
-    "Business Analytics",
-    "BI"
-  ],
+  "tools": ["Power BI"],
+  "topics": ["Sales Analytics", "Business Intelligence", "DAX"],
   "links": ["https://github.com/samyamdhamala/PowerBI_Projects/blob/main/Adventure%20Works%20Sales/README.md"]
 }

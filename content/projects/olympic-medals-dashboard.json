@@ -3,34 +3,37 @@
   "title": "Olympic Medals Dashboard",
   "role": "Data Analyst",
   "dates": "",
-  "summary": "Interactive Tableau suite focused on USA and global trends with gender-based analysis. Nine views cover participation, medal trends, top countries, and sport-level comparisons with filterable year/sport/country controls.",
+  "summary": "Comprehensive Tableau dashboard suite analyzing Olympic medals, participation, gender parity, and country dominance across decades. Designed for interactive exploration and storytelling.",
   "process": [
-    "Data cleaning & modeling",
-    "Visualization design",
-    "Filters & parameters",
-    "Publishing & sharing",
-    "Views included: Breaking Barriers (growth in women’s participation & medals); Closing the Gap (male vs. female trends); Icons of Success (standout women Olympians); Global Spotlight (countries leading women’s medals); USA Perspective (success by gender & sport); Top 10 Countries (medal leaders); USA Medal Trends (gold/silver/bronze over time); Participation Over the Years (male vs. female); Key Sports Driving USA Dominance (gender-based comparison)"
+    "Cleaned Olympic data and standardized country/sport fields for consistency",
+    "Created gender-based KPIs to analyze participation and medal equality over time",
+    "Designed multi-page dashboard with maps, time series, bar charts, and highlight tables",
+    "Added interactive controls (year, sport, gender, country) for self-serve analytics",
+    "Built USA-focused views showing medal distribution, gender trends, and dominating sports",
+    "Wrote annotations and tooltips that explain insights without requiring expert knowledge",
+    "Reviewed dashboards for performance, filter optimization, and mobile readability"
   ],
   "impact": [
-    "Enabled historical trend analysis across sports, years, and gender",
-    "Highlighted countries and sports driving growth in women’s medals",
-    "Provided quick USA-focused comparisons by sport and medal type"
+    "Enabled deeper understanding of global and US Olympic performance patterns",
+    "Highlighted impact of gender equity improvements over time",
+    "Demonstrated complex dashboard creation, data structuring, and exploratory analysis",
+    "Strengthened ability to present data narratives suitable for leadership dashboards"
   ],
   "tools": ["Tableau"],
-  "topics": ["Sports analytics", "Time series", "Gender equity", "USA", "Visualization"],
+  "topics": ["Sports Analytics", "Visualization", "Time Series", "Gender Equity"],
   "links": [
-    "https://public.tableau.com/views/Olympics_Task1/OlympicSuccessbyGenderandSportTheUSAPerspective?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-    "https://public.tableau.com/views/OlympicWomenParticipation/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+    "https://public.tableau.com/views/Olympics_Task1/...",
+    "https://public.tableau.com/views/OlympicWomenParticipation/..."
   ],
   "views": [
-    "Breaking Barriers: Growth in Women’s Participation & Medals",
-    "Closing the Gap: Male vs. Female Participation Over Time",
-    "Icons of Success: Standout Women Olympians",
-    "Global Spotlight: Countries Leading Women’s Medal Counts",
-    "USA Perspective: Olympic Success by Gender & Sport",
-    "Top 10 Medal-Winning Countries",
-    "USA Medal Trends Over Time (Gold, Silver, Bronze)",
-    "Participation Over the Years (Male vs. Female)",
-    "Key Sports Driving USA Dominance (Gender-Based Comparison)"
+    "Breaking Barriers",
+    "Closing the Gap",
+    "Icons of Success",
+    "Global Spotlight",
+    "USA Perspective",
+    "Top 10 Countries",
+    "USA Medal Trends",
+    "Participation Over the Years",
+    "Key Sports Driving USA Dominance"
   ]
 }
