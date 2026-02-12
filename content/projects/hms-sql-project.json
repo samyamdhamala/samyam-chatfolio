@@ -1,0 +1,19 @@
+{
+  "type": "project",
+  "title": "Hospital Management System (SQL)",
+  "role": "Data / Backend",
+  "dates": "2025",
+  "summary": "SQL and database project modeling a hospital management system. Covers clinical-style data: patients, doctors, appointments, billing, with normalized schema and integrity constraints.",
+  "process": [
+    "Designed relational schema for patients, doctors, appointments, billing",
+    "Implemented constraints, keys, and referential integrity",
+    "Created queries and structures suitable for reporting and audit"
+  ],
+  "impact": [
+    "Demonstrates SQL and data modeling for healthcare/operational systems",
+    "Relevant to clinical data and EMR-adjacent roles"
+  ],
+  "tools": ["SQL", "Data Modeling", "Relational DB"],
+  "topics": ["SQL", "Healthcare", "Data Modeling", "Database"],
+  "links": ["https://github.com/samyamdhamala/HMS-SQL-Project"]
+}

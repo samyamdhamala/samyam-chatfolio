@@ -7,7 +7,7 @@ import path from "path";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY!);
-const embedModel = genAI.getGenerativeModel({ model: "text-embedding-004" });
+const embedModel = genAI.getGenerativeModel({ model: "gemini-embedding-001" });
 
 function chunk(text: string, max = 1200, overlap = 200) {
     const words = text.split(/\s+/);
@@ -25,7 +25,7 @@ function titleize(s: string) {
 type Flat = { text: string; label: string };
 
 function flattenDoc(file: string, doc: any): Flat[] {
-    if (file.endsWith("contact.json") || doc.type === "contact_private") return [];
+    if (file.endsWith("contact.json") || doc.type === "contact_private" || doc.type === "roles") return [];
     const out: Flat[] = [];
 
     if (doc.type === "bio") {
@@ -46,6 +46,9 @@ function flattenDoc(file: string, doc: any): Flat[] {
             out.push({ text: `Skills: ${flatSkills}.`, label: "Resume • Skills" });
         }
         if (doc.languages?.length) out.push({ text: `Languages: ${doc.languages.join(", ")}.`, label: "Resume • Languages" });
+        if (Array.isArray(doc.certifications)) for (const c of doc.certifications)
+            out.push({ text: `Certification: ${c.name} — ${c.issuer || ""} ${c.date ? `(${c.date})` : ""}.`, label: "Resume • Certifications" });
+        if (doc.work_authorization) out.push({ text: `Work authorization: ${doc.work_authorization}.`, label: "Resume • Work authorization" });
         return out;
     }
     if (doc.type === "project") {

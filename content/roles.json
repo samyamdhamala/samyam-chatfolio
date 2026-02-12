@@ -1,0 +1,43 @@
+{
+  "type": "roles",
+  "roles": [
+    {
+      "id": "qa",
+      "label": "QA Engineer",
+      "shortLabel": "QA Engineer",
+      "pitch": "I focus on quality and reliability: test automation (Cypress, Playwright, Selenium), API testing with Postman and Swagger, and load testing with K6. I've led automation across 30+ release cycles, owned defect lifecycle in JIRA, and influenced go/no-go decisions with risk assessments.",
+      "skills": ["Cypress", "Playwright", "Selenium", "Postman", "Swagger", "K6", "JIRA", "CI/CD"],
+      "suggestedQuestions": [
+        "What QA and test automation experience do you have?",
+        "Which automation frameworks have you used?",
+        "How do you approach API testing?",
+        "Describe your experience with release and defect management."
+      ]
+    },
+    {
+      "id": "data_analyst",
+      "label": "Data Analyst",
+      "shortLabel": "Data Analyst",
+      "pitch": "I focus on turning data into clear, actionable insights. I use Power BI, Tableau, SQL, and Python to build dashboards, validate KPIs, and support data-driven decisions—with experience in ticket analytics, survey analysis, and EdTech reporting.",
+      "skills": ["Power BI", "Tableau", "SQL", "Python", "Excel", "DAX", "Qualtrics"],
+      "suggestedQuestions": [
+        "What data or BI experience do you have?",
+        "Describe a dashboard or report you built.",
+        "How do you validate data quality?",
+        "What's your experience with SQL and Python?"
+      ]
+    },
+    {
+      "id": "it_support",
+      "label": "IT Support",
+      "shortLabel": "IT Support",
+      "pitch": "I focus on keeping systems and users unblocked: resolving 600+ incidents (Windows/macOS, authentication, hardware), reimaging and deploying devices, MFA and knowledge base (120+ articles, 25% improvement in self-service), and asset tracking with KACE and AssetTiger.",
+      "skills": ["KACE", "DUO", "Microsoft Authenticator", "AssetTiger", "Windows 10/11", "macOS", "MFA"],
+      "suggestedQuestions": [
+        "What IT support experience do you have?",
+        "How do you handle ticket trends and knowledge base?",
+        "What tools do you use for imaging and asset management?"
+      ]
+    }
+  ]
+}

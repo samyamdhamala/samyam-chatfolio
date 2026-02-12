@@ -52,10 +52,10 @@ export async function POST(req: NextRequest) {
   try {
     const {
       text,
-      roleFocus = "Data Analyst",     // "Data Analyst" | "Business Analyst" | "QA"
-      style = "Persuasive recruiter", // e.g., "Executive concise", "Friendly and warm"
-      length = "medium",              // "short" | "medium" | "long"
-      jd = ""                         // optional pasted job description to tailor to
+      roleFocus = "QA",
+      style = "Same facts, shorter.",
+      length = "short",               // "short" for shorten; "medium" | "long" if needed later
+      jd = ""
     } = await req.json();
 
     if (!text || typeof text !== "string" || !text.trim()) {
@@ -73,26 +73,24 @@ export async function POST(req: NextRequest) {
     const persona = "Write in first person as Samyam Dhamala (she/her).";
     const guardrails = [
       "Keep facts consistent with the original; do not invent achievements, numbers, or tools not present.",
-      "No citations, file names, or labels.",
-      "Vary sentence openings; avoid starting every sentence with 'I'."
+      "Include what, when, where, and key numbers (percentages, timeframes). No citations or file names."
     ].join(" ");
 
-    // Avoid oversized payloads (very rare here, just defensive)
-    const SOURCE_MAX = 12000; // chars
+    const SOURCE_MAX = 12000;
     const safeText = text.slice(0, SOURCE_MAX);
     const safeJD = jd ? String(jd).slice(0, SOURCE_MAX) : "";
 
     const tailoring = safeJD
-      ? `Tailor the rewrite to this job description by emphasizing directly relevant tools, responsibilities, and results:\n${safeJD}\n`
+      ? `Tailor the rewrite to this job description:\n${safeJD}\n`
       : "";
 
     const prompt = [
       persona,
       `Audience: a ${roleFocus} recruiter.`,
-      `Desired style: ${style}. Target length: ${targetLen}.`,
+      `Task: ${style} Target length: ${targetLen}.`,
       guardrails,
       tailoring,
-      "Rewrite the following text smoothly and naturally:",
+      "Shorten the following text while keeping the same facts and key numbers:",
       safeText
     ].join("\n\n");
 

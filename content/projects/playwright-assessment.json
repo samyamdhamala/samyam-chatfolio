@@ -1,0 +1,19 @@
+{
+  "type": "project",
+  "title": "Playwright Assessment",
+  "role": "QA Engineer",
+  "dates": "2026",
+  "summary": "Test automation project using Playwright for UI and API testing. Demonstrates data-driven and Page Object Model (POM) patterns for maintainable test suites.",
+  "process": [
+    "Built automated tests with Playwright (JavaScript/TypeScript)",
+    "Applied data-driven and POM patterns for scalability",
+    "Covered UI flows and API validation"
+  ],
+  "impact": [
+    "Showcases QA automation skills with a modern framework",
+    "Aligns with industry shift from Selenium to Playwright"
+  ],
+  "tools": ["Playwright", "JavaScript", "POM", "Data-Driven Testing"],
+  "topics": ["QA", "Test Automation", "Playwright", "UI Testing"],
+  "links": ["https://github.com/samyamdhamala/playwright-assessment"]
+}

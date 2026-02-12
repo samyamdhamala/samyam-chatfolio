@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 
-type RoleFocus = "Data Analyst" | "Business Analyst" | "QA";
+type RoleFocus = "Data Analyst" | "Business Analyst" | "QA" | "IT Support";
 type Tone = "Concise" | "Detailed";
 
 type Msg = {
@@ -22,12 +22,15 @@ const SUGGESTED: string[] = [
 ];
 
 export default function AskPanel({
-  roleFocus = "Data Analyst",
-  tone = "Concise"
+  roleFocus = "QA",
+  tone = "Detailed",
+  suggestedQuestions,
 }: {
   roleFocus?: RoleFocus;
   tone?: Tone;
+  suggestedQuestions?: string[];
 }) {
+  const chips = (suggestedQuestions?.length ? suggestedQuestions : SUGGESTED).slice(0, 5);
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
@@ -124,7 +127,7 @@ export default function AskPanel({
     [loading, roleFocus, tone]
   );
 
-  async function reword(i: number, style: string) {
+  async function shorten(i: number) {
     const m = messages[i];
     if (!m || m.role !== "assistant") return;
 
@@ -134,8 +137,8 @@ export default function AskPanel({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           text: m.content,
-          style,
-          length: "medium",
+          style: "Same facts, shorter.",
+          length: "short",
           roleFocus
         })
       });
@@ -159,16 +162,16 @@ export default function AskPanel({
   }
 
   return (
-    <div className="rounded-2xl border bg-white shadow-sm p-4">
+    <div className="rounded-2xl border border-[var(--card-border)] bg-[var(--card)] shadow-[var(--card-shadow)] p-5">
       {/* Suggested chips */}
-      <div className="flex flex-wrap gap-2 mb-3" aria-label="Suggested questions">
-        {SUGGESTED.map((s, i) => (
+      <div className="flex flex-wrap gap-2 mb-4" aria-label="Suggested questions">
+        {chips.map((s, i) => (
           <button
             key={i}
             type="button"
             onClick={() => ask(s)}
             disabled={loading}
-            className="rounded-full border px-3 py-1 text-sm bg-white hover:bg-gray-100 disabled:opacity-50"
+            className="rounded-full border border-slate-200 dark:border-slate-600 px-3 py-1.5 text-sm text-slate-700 dark:text-slate-300 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-800/50 disabled:opacity-50 transition-colors"
           >
             {s}
           </button>
@@ -185,7 +188,7 @@ export default function AskPanel({
           <div key={i} className={m.role === "user" ? "text-right" : "text-left"}>
             <div
               className={`inline-block max-w-[90%] md:max-w-[75%] rounded-2xl px-4 py-3 ${
-                m.role === "user" ? "bg-blue-600 text-white" : "bg-white shadow"
+                m.role === "user" ? "bg-sky-600 text-white" : "bg-[var(--card)] border border-[var(--card-border)] shadow-sm"
               }`}
             >
               <div className="whitespace-pre-wrap leading-relaxed">{m.content}</div>
@@ -193,7 +196,7 @@ export default function AskPanel({
               {m.role === "assistant" && (
                 <>
                   {typeof m.confidence === "number" && (
-                    <div className="mt-2 text-xs text-gray-500">
+                    <div className="mt-2 text-xs text-slate-500 dark:text-slate-400">
                       confidence: {m.confidence.toFixed(2)}
                     </div>
                   )}
@@ -207,7 +210,7 @@ export default function AskPanel({
                           href={href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-xs rounded-full px-2 py-1 bg-gray-900 text-white"
+                          className="text-xs rounded-lg px-2.5 py-1 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-medium"
                           title={href}
                         >
                           {labelForLink(href)}
@@ -216,28 +219,14 @@ export default function AskPanel({
                     </div>
                   )}
 
-                  {/* Rephrase */}
-                  <div className="mt-3 flex flex-wrap gap-2">
+                  {/* Shorten */}
+                  <div className="mt-3">
                     <button
                       type="button"
-                      onClick={() => reword(i, "Persuasive recruiter")}
-                      className="text-xs rounded-full px-3 py-1 border bg-white hover:bg-gray-100"
+                      onClick={() => shorten(i)}
+                      className="text-xs rounded-lg px-3 py-1.5 border border-slate-200 dark:border-slate-600 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-800/50 text-slate-700 dark:text-slate-300"
                     >
-                      Rephrase: Persuasive
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => reword(i, "Friendly and warm")}
-                      className="text-xs rounded-full px-3 py-1 border bg-white hover:bg-gray-100"
-                    >
-                      Rephrase: Friendly
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => reword(i, "Executive concise")}
-                      className="text-xs rounded-full px-3 py-1 border bg-white hover:bg-gray-100"
-                    >
-                      Rephrase: Executive
+                      Shorten
                     </button>
                   </div>
 
@@ -247,7 +236,7 @@ export default function AskPanel({
                       <button
                         type="button"
                         onClick={() => setDmOpen(true)}
-                        className="inline-flex items-center rounded-full bg-gray-900 text-white px-4 py-2 text-sm"
+                        className="inline-flex items-center rounded-lg bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-4 py-2 text-sm font-medium"
                       >
                         Message me directly
                       </button>
@@ -261,9 +250,9 @@ export default function AskPanel({
 
         {loading && (
           <div className="text-left">
-            <div className="inline-block rounded-2xl px-4 py-3 bg-white shadow">
-              <div className="animate-pulse w-64 h-4 bg-gray-200 rounded mb-2" />
-              <div className="animate-pulse w-48 h-4 bg-gray-200 rounded" />
+            <div className="inline-block rounded-2xl px-4 py-3 bg-[var(--card)] border border-[var(--card-border)]">
+              <div className="animate-pulse w-64 h-4 bg-slate-200 dark:bg-slate-600 rounded mb-2" />
+              <div className="animate-pulse w-48 h-4 bg-slate-200 dark:bg-slate-600 rounded" />
             </div>
           </div>
         )}
@@ -272,7 +261,7 @@ export default function AskPanel({
       {/* Composer */}
       <form onSubmit={onSubmit} className="mt-3 flex gap-2">
         <input
-          className="flex-1 rounded-xl border px-4 py-3"
+          className="flex-1 rounded-xl border border-slate-200 dark:border-slate-600 bg-[var(--card)] px-4 py-3 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/30"
           placeholder="e.g., Give me your 60-second pitch."
           value={input}
           onChange={(e) => setInput(e.target.value)}
@@ -281,7 +270,7 @@ export default function AskPanel({
         />
         <button
           type="submit"
-          className="rounded-xl bg-blue-600 text-white px-5 disabled:opacity-60"
+          className="rounded-xl bg-sky-600 text-white px-5 py-3 font-medium hover:bg-sky-700 disabled:opacity-60 transition-colors"
           disabled={loading || !input.trim()}
         >
           Send
@@ -362,23 +351,23 @@ function DMModal({
     >
       <div
         ref={dialogRef}
-        className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6"
+        className="bg-[var(--card)] rounded-2xl shadow-xl w-full max-w-md p-6 border border-[var(--card-border)]"
       >
-        <h2 className="text-lg font-semibold">Ask me directly</h2>
-        <p className="text-sm text-gray-600 mb-4">
+        <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Ask me directly</h2>
+        <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
           I’ll receive your question by email.
         </p>
 
         <form onSubmit={submit} className="space-y-3">
           <input
-            className="w-full border rounded-lg px-3 py-2"
+            className="w-full border border-slate-200 dark:border-slate-600 rounded-lg px-3 py-2 bg-[var(--card)] text-slate-900 dark:text-slate-100"
             placeholder="Your name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
           />
           <input
-            className="w-full border rounded-lg px-3 py-2"
+            className="w-full border border-slate-200 dark:border-slate-600 rounded-lg px-3 py-2 bg-[var(--card)] text-slate-900 dark:text-slate-100"
             placeholder="Your email"
             type="email"
             value={email}
@@ -386,7 +375,7 @@ function DMModal({
             required
           />
           <textarea
-            className="w-full border rounded-lg px-3 py-2"
+            className="w-full border border-slate-200 dark:border-slate-600 rounded-lg px-3 py-2 bg-[var(--card)] text-slate-900 dark:text-slate-100"
             placeholder="Your message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
@@ -404,21 +393,21 @@ function DMModal({
           <div className="flex flex-wrap justify-end gap-2">
             <a
               href={mailtoHref}
-              className="px-4 py-2 rounded-lg border text-sm"
+              className="px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm hover:bg-slate-50 dark:hover:bg-slate-800/50"
             >
               Open email app
             </a>
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 rounded-lg border text-sm"
+              className="px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-600 text-sm disabled:opacity-50"
               disabled={status === "sending"}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-4 py-2 rounded-lg bg-gray-900 text-white text-sm disabled:opacity-60"
+              className="px-4 py-2 rounded-lg bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 text-sm font-medium disabled:opacity-60"
               disabled={status === "sending"}
             >
               {status === "sending" ? "Sending..." : "Send"}

@@ -1,140 +1,80 @@
 {
   "type": "resume",
-  "summary": "Versatile Data Analyst, QA Engineer, and Software/C++ Developer with 3+ years across QA automation, BI reporting, IT support, and full-stack development. Skilled in Python, SQL, Power BI, Tableau, modern C++, and tools like Cypress, Postman, JMeter, and Git. Known for validating data, expanding test coverage, and building dashboards and tools that make technical systems easier to understand and trust.",
+  "summary": "Data Analyst and QA Engineer with 4+ years across data validation, BI reporting, test automation, and IT support. M.S. in Information Science (4.0 GPA). Skilled in Power BI, Tableau, SQL, Python, Cypress, Postman, and K6. Experienced validating analytics for EdTech and financial platforms, building dashboards, and supporting academic IT. No visa sponsorship required.",
   "education": [
     {
-      "degree": "MSc Information Science (STEM)",
+      "degree": "M.S. Information Science (GPA: 4.0)",
       "school": "University of New Haven",
       "location": "West Haven, CT",
-      "dates": "Expected Dec 2025",
+      "dates": "Jan 2024 – Dec 2025",
       "gpa": "4.0"
     },
     {
-      "degree": "BSc (Hons) Computing (First Class Honours)",
-      "school": "London Metropolitan University (via Islington College)",
-      "location": "Kathmandu, Nepal",
-      "dates": "Graduated 2022",
+      "degree": "B.S. Hons in Computing (GPA: 4.0)",
+      "school": "London Metropolitan College",
+      "location": "London, UK",
+      "dates": "Aug 2019 – May 2022",
       "gpa": "4.0"
     }
   ],
   "experience": [
     {
-      "role": "Technical Support Assistant Intern",
+      "role": "Technical Support Assistant",
       "org": "University of New Haven",
       "location": "West Haven, CT",
-      "dates": "Jun 2025 – Present",
+      "dates": "Jun 2025 – Dec 2025",
       "bullets": [
-        "Resolved 550+ support tickets, diagnosing hardware, software, and account issues and reducing resolution time by ~30%.",
-        "Assisted students and staff with DUO and Microsoft Authenticator setup, PIN resets, and secure account recovery.",
-        "Installed and configured software such as Microsoft 365, SPSS, and virtual machines; performed basic hardware repairs (RAM, drives, batteries).",
-        "Updated and maintained the AI chatbot knowledge base, improving answer accuracy and reducing manual workload by ~25%.",
-        "Documented tickets, repairs, and recurring issues, and contributed to simple Excel/Power BI reports on ticket trends and resolution KPIs."
+        "Resolved 600+ Tier 1 and Tier 2 IT incidents involving Windows/macOS, authentication, application access, and hardware, restoring service for faculty, staff, and students.",
+        "Reimaged and deployed Windows 10/11 and macOS systems to standardized baselines; performed hardware repairs (RAM, SSDs, batteries) to extend device lifecycle.",
+        "Supported MFA and account recovery using DUO and Microsoft Authenticator; analyzed incident trends using KACE and updated 120+ knowledge base articles, improving chatbot self-service resolution by 25%.",
+        "Tracked IT assets using AssetTiger; built Excel/Power BI summaries for resolution rates and ticket trends to support operational decisions."
       ]
     },
     {
-      "role": "Teaching Assistant — Python Programming",
+      "role": "Teaching Assistant – Python Programming",
       "org": "University of New Haven",
       "location": "West Haven, CT",
-      "dates": "May 2025 – Present",
+      "dates": "May 2025 – Aug 2025",
       "bullets": [
-        "Guided students through Python labs on loops, functions, OOP, and problem-solving patterns; provided debugging support in real time.",
-        "Evaluated and provided feedback on 50+ assignments, emphasizing readable, maintainable code and clear logic.",
-        "Helped students connect core programming concepts to data analysis and automation use cases."
+        "Supported Python instruction covering control flow, data structures, debugging, and object-oriented programming.",
+        "Graded and reviewed 100+ programming submissions, providing structured feedback to improve correctness, logic, and maintainability."
       ]
     },
     {
-      "role": "Mid-Level QA/QC Engineer",
+      "role": "QA Engineer II",
       "org": "Innovate Tech",
       "location": "Kathmandu, Nepal",
       "dates": "Feb 2022 – Dec 2023",
       "bullets": [
-        "Conducted manual and automated testing for a global EdTech platform, covering web UI, APIs, and data pipelines.",
-        "Led frontend automation using Cypress.js, expanding regression coverage by ~35% and reducing manual regression effort.",
-        "Designed SQL queries and data checks to validate reporting accuracy and cross-verify analytics data with source systems.",
-        "Managed API and performance testing with Postman, Swagger, JMeter/K6 and integrated suites into CI/CD pipelines.",
-        "Collaborated with developers and business stakeholders in Agile/JIRA workflows to triage defects, plan hotfixes, and improve user experience."
+        "Led frontend test automation using Cypress in CI/CD across 30+ release cycles, increasing regression coverage by 35% and improving release stability.",
+        "Designed and executed REST API testing with Postman and Swagger across 100+ endpoints; performed load testing with K6 to identify latency bottlenecks.",
+        "Owned defect lifecycle in JIRA; presented QA risk assessments and test coverage during sprint planning and release reviews, influencing go/no-go decisions.",
+        "Validated analytics data and KPI accuracy for a global EdTech platform; built Power BI dashboards for program features and defect trends."
       ]
     },
     {
-      "role": "Software QA Engineer (Contract)",
-      "org": "Cedar Gate Technologies",
-      "location": "Kathmandu, Nepal",
-      "dates": "Dec 2023 – Jan 2024",
-      "bullets": [
-        "Executed functional and regression testing for a healthcare analytics platform with complex workflows and data flows.",
-        "Translated requirements and user stories into detailed test cases with strong coverage of edge cases and data validation.",
-        "Partnered with engineering and product teams to refine workflows, log clear defects, and support faster resolution cycles."
-      ]
-    },
-    {
-      "role": "QA Trainee",
+      "role": "QA Assistant",
       "org": "SB Solutions",
       "location": "Kathmandu, Nepal",
       "dates": "Jul 2021 – Dec 2021",
       "bullets": [
-        "Performed functional and regression testing for financial web applications, focusing on core transactions and security flows.",
-        "Supported early Selenium-based UI automation efforts and basic performance and hardware testing.",
-        "Learned defect lifecycle, SDLC, and documentation best practices in a structured QA environment."
+        "Executed functional and regression testing for financial web applications; logged and tracked 100+ defects in OrangeScrum with clear reproduction steps and severity.",
+        "Maintained and executed Selenium WebDriver UI automation scripts; supported performance and device validation testing."
       ]
     }
   ],
+  "certifications": [
+    { "name": "Building LLM Applications with Prompt Engineering", "issuer": "NVIDIA", "date": "Oct 2025" },
+    { "name": "End-to-End Real-World Data Engineering Project with Snowflake", "issuer": "LinkedIn Learning", "date": "Oct 2025" },
+    { "name": "Telling Stories with Data", "issuer": "LinkedIn Learning", "date": "Sep 2025" }
+  ],
   "skills": {
-    "languages_frameworks": [
-      "Python",
-      "SQL",
-      "JavaScript",
-      "TypeScript",
-      "C++",
-      "C#",
-      "Java",
-      "Dart",
-      ".NET",
-      "Node.js",
-      "Flutter",
-      "Express.js",
-      "React (basic)"
-    ],
-    "testing_tools": [
-      "Cypress.js",
-      "Postman",
-      "Swagger",
-      "Selenium",
-      "JMeter",
-      "K6",
-      "Git",
-      "GitHub",
-      "API Testing",
-      "CI/CD Pipelines"
-    ],
-    "data_viz": [
-      "Power BI",
-      "Tableau",
-      "Excel",
-      "DAX",
-      "MySQL",
-      "Oracle SQL",
-      "Snowflake",
-      "Data Modeling & Star Schemas"
-    ],
-    "process": [
-      "Agile/Scrum & Kanban",
-      "SDLC",
-      "Manual & Automated Testing",
-      "Data Quality Assurance",
-      "Requirements Gathering",
-      "Ticketing & Incident Management (JIRA)"
-    ],
-    "other": [
-      "IT Support & Troubleshooting",
-      "MFA Setup (DUO, Microsoft Authenticator)",
-      "Documentation",
-      "Cross-functional Communication",
-      "Dashboard Storytelling"
-    ]
+    "languages_frameworks": ["Python", "SQL", "JavaScript", "TypeScript", "Java", "C#", "HTML", "CSS"],
+    "testing_tools": ["Cypress (UI & API)", "Playwright (Data-Driven, POM)", "Selenium WebDriver", "Postman", "Swagger/OpenAPI", "K6", "Git", "GitHub", "CI/CD"],
+    "data_viz": ["Power BI", "Tableau", "Excel", "DAX", "MySQL", "Oracle", "Snowflake", "Qualtrics"],
+    "it_support": ["KACE", "DUO", "Microsoft Authenticator", "AssetTiger", "Windows 10/11", "macOS"],
+    "process": ["Agile (Scrum, Kanban)", "SDLC", "JIRA", "Confluence", "Incident Management"]
   },
-  "languages": [
-    "English",
-    "Hindi",
-    "Nepali"
-  ]
+  "languages": ["English", "Hindi", "Nepali"],
+  "work_authorization": "No visa sponsorship required"
 }

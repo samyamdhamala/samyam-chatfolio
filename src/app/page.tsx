@@ -1,59 +1,148 @@
 "use client";
 
+import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ProfileHeader from "../components/ProfileHeader";
 import ChatAbout from "../components/ChatAbout";
 import ProjectsGrid from "../components/ProjectsGrid";
 import AskPanel from "../components/AskPanel";
+import RoleSelector, {
+  getSuggestedQuestionsForRole,
+  type ViewerRole,
+  type RoleOption,
+} from "../components/RoleSelector";
 
 export default function Page() {
+  const [selectedRole, setSelectedRole] = useState<ViewerRole | null>(null);
+  const [roles, setRoles] = useState<RoleOption[]>([]);
+
+  useEffect(() => {
+    fetch("/api/roles")
+      .then((r) => r.json())
+      .then((data) => setRoles(data.roles ?? []))
+      .catch(() => setRoles([]));
+  }, []);
+
+  const suggestedQuestions = useMemo(
+    () =>
+      selectedRole && roles.length
+        ? getSuggestedQuestionsForRole(roles, selectedRole)
+        : undefined,
+    [roles, selectedRole]
+  );
+
   return (
-    <main className="min-h-screen bg-gradient-to-b from-white to-gray-50 text-gray-900">
-      {/* Top nav with anchored sections */}
-      <header className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b">
-        <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+      <header className="sticky top-0 z-20 border-b border-[var(--card-border)] bg-[var(--card)]/95 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="relative w-8 h-8 overflow-hidden rounded-full bg-gray-200">
-              <Image src="/samyam.jpg" alt="Samyam Dhamala" fill className="object-cover" />
+            <div className="relative w-9 h-9 overflow-hidden rounded-full ring-2 ring-slate-200 dark:ring-slate-600">
+              <Image
+                src="/samyam.jpg"
+                alt="Samyam Dhamala"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
-            <span className="font-semibold">Samyam Dhamala</span>
+            <span className="font-semibold text-slate-800 dark:text-slate-100">
+              Samyam Dhamala
+            </span>
           </div>
-          <nav className="hidden md:flex items-center gap-4 text-sm">
-            <Link href="#about" className="hover:text-blue-600">About</Link>
-            <Link href="#chatbot" className="hover:text-blue-600">About the Chatbot</Link>
-            <Link href="#ask" className="hover:text-blue-600">Ask</Link>
-            <Link href="#projects" className="hover:text-blue-600">Projects</Link>
-            <a href="/Samyam_Dhamala_Resume.pdf" download className="px-3 py-1.5 rounded-lg bg-gray-900 text-white">
-              Download Resume
+          <nav className="hidden md:flex items-center gap-5 text-sm">
+            <Link
+              href="#about"
+              className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              href="#chatbot"
+              className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
+            >
+              Chat
+            </Link>
+            <Link
+              href="#role"
+              className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
+            >
+              Role
+            </Link>
+            <Link
+              href="#ask"
+              className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
+            >
+              Ask
+            </Link>
+            <Link
+              href="#projects"
+              className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
+            >
+              Projects
+            </Link>
+            <a
+              href="https://github.com/samyamdhamala"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-600 dark:text-slate-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href="/Samyam_Dhamala_Resume.pdf"
+              download
+              className="px-4 py-2 rounded-lg bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 text-sm font-medium hover:opacity-90 transition-opacity"
+            >
+              Resume
             </a>
           </nav>
         </div>
       </header>
 
-      {/* About Me */}
-      <section id="about" className="max-w-5xl mx-auto px-6 py-8">
+      <section id="about" className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <ProfileHeader />
       </section>
 
-      {/* About the Chatbot */}
-      <section id="chatbot" className="max-w-5xl mx-auto px-6 py-8">
+      <section id="role" className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        <RoleSelector
+          selectedRole={selectedRole}
+          onSelectRole={setSelectedRole}
+          roles={roles}
+        />
+      </section>
+
+      <section id="chatbot" className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
         <ChatAbout />
       </section>
 
-      {/* Ask (inline chat) */}
-      <section id="ask" className="max-w-5xl mx-auto px-6 py-8">
-        <h2 className="text-2xl font-semibold mb-4">Ask</h2>
-        <AskPanel />
+      <section id="ask" className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        <h2 className="section-title">Ask me anything</h2>
+        <p className="mt-2 text-slate-600 dark:text-slate-400 text-sm max-w-xl">
+          {selectedRole
+            ? `Answers are tailored for ${selectedRole} recruiters. `
+            : ""}
+          Questions about my experience, skills, or projects. Answers are grounded in my resume and project data.
+        </p>
+        <div className="mt-6">
+          <AskPanel
+            roleFocus={selectedRole ?? "QA"}
+            suggestedQuestions={suggestedQuestions}
+          />
+        </div>
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="max-w-5xl mx-auto px-6 py-8">
-        <h2 className="text-2xl font-semibold mb-4">My Projects</h2>
-        <ProjectsGrid />
+      <section id="projects" className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        <h2 className="section-title">Projects</h2>
+        <p className="mt-2 text-slate-600 dark:text-slate-400 text-sm max-w-xl">
+          BI dashboards, data analysis, QA automation, and full-stack work.
+        </p>
+        <div className="mt-6">
+          <ProjectsGrid />
+        </div>
       </section>
 
-      <footer className="mt-8 py-8 text-center text-sm text-gray-500">
+      <footer className="border-t border-[var(--card-border)] mt-16 py-8 text-center text-sm text-slate-500 dark:text-slate-400">
         © {new Date().getFullYear()} Samyam Dhamala
       </footer>
     </main>

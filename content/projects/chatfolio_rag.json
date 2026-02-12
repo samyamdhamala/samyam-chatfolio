@@ -18,7 +18,7 @@
     "Showcased ability to integrate LLMs, vector search, and front-end engineering into a cohesive system",
     "Demonstrated UX thinking, accessibility design, and full-stack engineering skills in one project"
   ],
-  "tools": ["Next.js", "TypeScript", "Tailwind", "Gemini Flash", "text-embedding-004"],
+  "tools": ["Next.js", "TypeScript", "Tailwind", "Gemini Flash", "gemini-embedding-001"],
   "topics": ["RAG", "AI", "LLM", "Retrieval", "Full-stack Development", "UX"],
-  "links": []
+  "links": ["https://github.com/samyamdhamala/samyam-chatfolio"]
 }

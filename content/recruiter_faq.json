@@ -3,19 +3,19 @@
   "items": [
     {
       "q": "Elevator pitch",
-      "a": "I’m Samyam, a Data Analyst / QA Engineer / Software Developer with 3+ years across QA automation, data visualization, IT support, and full-stack work. I like combining a QA mindset (edge cases, reliability) with data skills (SQL, Python, BI dashboards) and software engineering (C++, .NET, web) to ship systems that are both accurate and usable."
+      "a": "I'm Samyam, a Data Analyst and QA Engineer with 4+ years across data validation, BI reporting, test automation, and IT support. I have an M.S. in Information Science and combine a QA mindset with Power BI, SQL, and Python to validate data, build dashboards, and improve reliability. I'm targeting Data Analyst, Business Analyst, QA Engineer, and IT Support roles. No visa sponsorship required."
     },
     {
-      "q": "What I’m looking for",
-      "a": "I’m targeting Data Analyst, Business Analyst, QA Engineer, and hybrid Data/QA or Software roles where I can own pipelines, validate data and features, build dashboards and tools, and partner closely with stakeholders to turn requirements into reliable, measurable outcomes."
+      "q": "What I'm looking for",
+      "a": "I'm targeting Data Analyst, Business Analyst, QA Engineer, and IT Support / Service Desk roles where I can own data pipelines, validate data and features, build dashboards and knowledge bases, and partner with stakeholders to turn requirements into reliable outcomes."
     },
     {
       "q": "Top skills",
-      "a": "SQL (MySQL, Oracle), Python (Pandas/NumPy), Power BI, Tableau, Excel; QA automation with Cypress, Postman, Swagger, JMeter; Programming in C++, C#, JavaScript, Dart, Java, .NET, Node.js, Flutter; Data modeling, DAX, dashboard design; Agile/Scrum, JIRA, CI/CD, documentation, ticket triage, and cross-functional communication."
+      "a": "Data: Power BI, Tableau, Excel, SQL (MySQL, Oracle), Python (Pandas, NumPy), DAX, Qualtrics, Snowflake. QA: Cypress, Selenium, Postman, Swagger, K6, JIRA. IT Support: KACE, DUO, Microsoft Authenticator, AssetTiger, Windows/macOS. Methods: Agile, SDLC, incident management."
     },
     {
       "q": "Recent experience",
-      "a": "Recently I’ve been a Technical Support Assistant and Python Teaching Assistant at the University of New Haven, where I resolve 500+ tickets, support MFA/software installs, improve an AI chatbot knowledge base, and build basic reports and dashboards. Before that I worked as a Mid-Level QA/QC Engineer and QA Trainee testing a global EdTech and fintech products with Cypress, Postman, and JMeter."
+      "a": "I'm currently a Technical Support Assistant at the University of New Haven, resolving 600+ incidents, reimaging Windows/macOS systems, maintaining MFA and knowledge base (120+ articles, 25% improvement in self-service resolution), and building Power BI/Excel reports. I was a Python Teaching Assistant (May–Aug 2025) and before that QA Engineer II at Innovate Tech (Cypress, Postman, K6, JIRA) and QA Assistant at SB Solutions."
     },
     {
       "q": "Pronouns",
@@ -27,7 +27,7 @@
     },
     {
       "q": "Work authorization & timeline",
-      "a": "I’m an international student in the U.S. completing my MS in Information Science (STEM). I’ll be eligible for 12-month post-completion OPT plus a 24-month STEM extension after graduation (expected Dec 2025), and I’m open to internships, co-ops, and full-time roles aligned with that timeline."
+      "a": "No visa sponsorship required. I completed my M.S. in Information Science in Dec 2025. I'm open to full-time roles, internships, and co-ops in Data Analysis, QA, Business Analysis, and IT Support."
     }
   ]
 }
