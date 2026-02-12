@@ -60,20 +60,6 @@ export default function ProfileHeader() {
 
         <div className="mt-6 flex flex-wrap gap-3">
           <a
-            href="/Samyam_Dhamala_Resume.pdf"
-            download
-            className="inline-flex items-center px-4 py-2.5 rounded-lg bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 text-sm font-medium hover:opacity-90 transition-opacity"
-          >
-            Download PDF
-          </a>
-          <a
-            href="/Samyam_Dhamala_Resume.docx"
-            download
-            className="inline-flex items-center px-4 py-2.5 rounded-lg border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 text-sm font-medium hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors"
-          >
-            Download DOCX
-          </a>
-          <a
             href="https://github.com/samyamdhamala"
             target="_blank"
             rel="noopener noreferrer"

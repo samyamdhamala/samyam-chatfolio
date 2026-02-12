@@ -21,10 +21,7 @@ export default function Hero({
             ))}
           </div>
         </div>
-        <div className="flex flex-col items-stretch gap-2 shrink-0">
-          <a href="/Samyam_Dhamala_Resume.pdf" download className="rounded-xl bg-gray-900 text-white px-4 py-2 text-center">Download PDF</a>
-          <a href="/Samyam_Dhamala_Resume.docx" download className="rounded-xl border px-4 py-2 text-center">Download DOCX</a>
-        </div>
+
       </div>
     </div>
   );
